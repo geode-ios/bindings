@@ -9734,7 +9734,7 @@ class LevelAreaLayer : cocos2d::CCLayer, DialogDelegate {
 	TodoReturn scene();
 	cocos2d::CCAction* showDialog();
 
-	virtual bool init() = imac 0x273a40, m1 0x2197d8;
+	virtual bool init() = imac 0x273a40, m1 0x2197d8, ios 0x352768;
 	virtual void keyBackClicked() = win 0x2b30e0, m1 0x21b8b0;
 	virtual void dialogClosed(DialogLayer*) = win 0x2b2420, m1 0x21b680, imac 0x275900;
 }
