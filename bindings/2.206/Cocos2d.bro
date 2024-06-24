@@ -574,7 +574,7 @@ class cocos2d::CCNode {
 	void qsortAllChildrenWithIndex();
 	void resumeSchedulerAndActions() = ios 0x24c6fc;
 	cocos2d::CCAction* runAction(cocos2d::CCAction*) = imac 0x2700d0, m1 0x216408, ios 0x24ca08;
-	void schedule(cocos2d::SEL_SCHEDULE) = imac 0x270300, m1 0x2165bc;
+	void schedule(cocos2d::SEL_SCHEDULE) = imac 0x270300, m1 0x2165bc, ios 0x24cb34;
 	void schedule(cocos2d::SEL_SCHEDULE, float) = imac 0x270360, m1 0x2165fc, ios 0x24cb58;
 	void schedule(cocos2d::SEL_SCHEDULE, float, unsigned int, float);
 	void scheduleOnce(cocos2d::SEL_SCHEDULE, float);
@@ -1135,7 +1135,7 @@ class cocos2d::CCImage {
 	unsigned short getWidth() const;
 
 	CCImage() = imac 0x492a70, m1 0x3f7c40, ios 0x317a4;
-	~CCImage() = imac 0x492af0, m1 0x3f7ca8;
+	~CCImage() = imac 0x492af0, m1 0x3f7ca8, ios 0x317d0;
 
 	bool _initWithJpgData(void*, int);
 	bool _initWithPngData(void*, int);
