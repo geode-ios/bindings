@@ -726,7 +726,7 @@ class cocos2d::CCScheduler {
 	void unscheduleSelector(cocos2d::SEL_SCHEDULE, cocos2d::CCObject*) = imac 0x44b190, m1 0x3bc6c0;
 	void unscheduleUpdateForTarget(cocos2d::CCObject const*);
 
-	virtual void update(float) = imac 0x44d2a0, m1 0x3be890;
+	virtual void update(float) = imac 0x44d2a0, m1 0x3be890, ios 0x1b790c;
 }
 
 [[link(win, android)]]
