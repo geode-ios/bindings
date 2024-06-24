@@ -575,10 +575,10 @@ class cocos2d::CCNode {
 	void resumeSchedulerAndActions() = ios 0x24c6fc;
 	cocos2d::CCAction* runAction(cocos2d::CCAction*) = imac 0x2700d0, m1 0x216408, ios 0x24ca08;
 	void schedule(cocos2d::SEL_SCHEDULE) = imac 0x270300, m1 0x2165bc;
-	void schedule(cocos2d::SEL_SCHEDULE, float) = imac 0x270360, m1 0x2165fc;
+	void schedule(cocos2d::SEL_SCHEDULE, float) = imac 0x270360, m1 0x2165fc, ios 0x24cb58;
 	void schedule(cocos2d::SEL_SCHEDULE, float, unsigned int, float);
 	void scheduleOnce(cocos2d::SEL_SCHEDULE, float);
-	void scheduleUpdate() = imac 0x2701e0, m1 0x2164c4;
+	void scheduleUpdate() = imac 0x2701e0, m1 0x2164c4, ios 0x24cab0;
 	void scheduleUpdateWithPriority(int);
 	void scheduleUpdateWithPriorityLua(int, int);
 	void sortAllChildrenNoIndex();
@@ -716,9 +716,9 @@ class cocos2d::CCScheduler {
 	void resumeTarget(cocos2d::CCObject*);
 	void resumeTargets(cocos2d::CCSet*);
 	unsigned int scheduleScriptFunc(unsigned int, float, bool);
-	void scheduleSelector(cocos2d::SEL_SCHEDULE, cocos2d::CCObject*, float, unsigned int, float, bool) = imac 0x44b680, m1 0x3bcbb4;
+	void scheduleSelector(cocos2d::SEL_SCHEDULE, cocos2d::CCObject*, float, unsigned int, float, bool) = imac 0x44b680, m1 0x3bcbb4, ios 0x1b6178;
 	void scheduleSelector(cocos2d::SEL_SCHEDULE, cocos2d::CCObject*, float, bool) = imac 0x44b660;
-	void scheduleUpdateForTarget(cocos2d::CCObject*, int, bool) = imac 0x44c260;
+	void scheduleUpdateForTarget(cocos2d::CCObject*, int, bool) = imac 0x44c260, ios 0x1b6dbc;
 	void unscheduleAll();
 	void unscheduleAllForTarget(cocos2d::CCObject*);
 	void unscheduleAllWithMinPriority(int);
@@ -804,7 +804,7 @@ class cocos2d::CCLayerGradient {
 	// CCLayerGradient(cocos2d::CCLayerGradient const&);
 	// CCLayerGradient();
 
-	virtual bool init() = imac 0x4bd860;
+	virtual bool init() = imac 0x4bd860, ios 0x154b80;
 
 	virtual void updateColor();
 	virtual bool initWithColor(cocos2d::_ccColor4B const&, cocos2d::_ccColor4B const&);
@@ -994,7 +994,7 @@ class cocos2d::CCTextureCache {
 	void addImageAsync(char const*, cocos2d::CCObject*, cocos2d::SEL_MenuHandler, int, cocos2d::CCTexture2DPixelFormat);
 	void addImageAsyncCallBack(float);
 	cocos2d::CCTexture2D* addPVRImage(char const*);
-	cocos2d::CCTexture2D* addUIImage(cocos2d::CCImage*, char const*) = imac 0x5f8250, m1 0x520194;
+	cocos2d::CCTexture2D* addUIImage(cocos2d::CCImage*, char const*) = imac 0x5f8250, m1 0x520194, ios 0x115efc;
 	char const* description();
 	void dumpCachedTextureInfo();
 	void prepareAsyncLoading() = ios 0x114aa4;
@@ -1123,7 +1123,7 @@ class cocos2d::CCEGLView {
 
 [[link(win, android)]]
 class cocos2d::CCImage {
-	bool initWithImageData(void*, int, cocos2d::CCImage::EImageFormat, int, int, int, int) = imac 0x492d80, m1 0x3f7f58;
+	bool initWithImageData(void*, int, cocos2d::CCImage::EImageFormat, int, int, int, int) = imac 0x492d80, m1 0x3f7f58, ios 0x31938;
 	bool initWithImageFile(char const*, cocos2d::CCImage::EImageFormat);
 	bool initWithImageFileThreadSafe(char const*, cocos2d::CCImage::EImageFormat);
 	bool initWithString(char const*, int, int, cocos2d::CCImage::ETextAlign, char const*, int);
@@ -1134,7 +1134,7 @@ class cocos2d::CCImage {
 	unsigned short getHeight() const;
 	unsigned short getWidth() const;
 
-	CCImage() = imac 0x492a70, m1 0x3f7c40;
+	CCImage() = imac 0x492a70, m1 0x3f7c40, ios 0x317a4;
 	~CCImage() = imac 0x492af0, m1 0x3f7ca8;
 
 	bool _initWithJpgData(void*, int);
@@ -1365,7 +1365,7 @@ class cocos2d::CCSprite {
 	static cocos2d::CCSprite* create() = imac 0x2846b0;
 	static cocos2d::CCSprite* createWithSpriteFrame(cocos2d::CCSpriteFrame*) = imac 0x284590, m1 0x229240, ios 0x247d1c;
 	static cocos2d::CCSprite* createWithSpriteFrameName(char const*) = imac 0x284680, m1 0x22932c, ios 0x247d9c;
-	static cocos2d::CCSprite* createWithTexture(cocos2d::CCTexture2D*) = imac 0x284130, m1 0x228df0;
+	static cocos2d::CCSprite* createWithTexture(cocos2d::CCTexture2D*) = imac 0x284130, m1 0x228df0, ios 0x247c14;
 	static cocos2d::CCSprite* createWithTexture(cocos2d::CCTexture2D*, cocos2d::CCRect const&) = imac 0x2842c0;
 
 	unsigned int getAtlasIndex();
