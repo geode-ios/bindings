@@ -792,8 +792,12 @@ class cocos2d::CCLayer {
 
 [[link(win, android)]]
 class cocos2d::CCLayerGradient {
-	static cocos2d::CCLayerGradient* create(cocos2d::_ccColor4B const&, cocos2d::_ccColor4B const&) = m1 0x41dfd0, imac 0x4bd4b0;
-	static cocos2d::CCLayerGradient* create(cocos2d::_ccColor4B const&, cocos2d::_ccColor4B const&, cocos2d::CCPoint const&) = imac 0x4bd760, m1 0x41e1ec;
+	static cocos2d::CCLayerGradient* create(cocos2d::_ccColor4B const&, cocos2d::_ccColor4B const&) = m1 0x41dfd0, imac 0x4bd4b0, ios 0x154a80;
+	static cocos2d::CCLayerGradient* create(cocos2d::_ccColor4B const& startCol, cocos2d::_ccColor4B const& endCol, cocos2d::CCPoint const& vector) = ios inline, imac 0x4bd760, m1 0x41e1ec {
+		auto pRet = create(startCol, endCol);
+		//pRet->setVector(vector); // todo: run virtual script cuz there is NO WAY im doing any more virtuals manually i am actually going insane help me pls
+		return pRet;
+	}
 	static cocos2d::CCLayerGradient* create();
 
 	bool getShouldPremultiply() const;
@@ -934,7 +938,7 @@ class cocos2d::CCMouseDispatcher {
 [[link(win, android)]]
 class cocos2d::CCTexture2D {
 	static void PVRImagesHavePremultipliedAlpha(bool) = m1 0x3e9984, imac 0x483620;
-	static cocos2d::CCTexture2DPixelFormat defaultAlphaPixelFormat() = m1 0x3e9b50, imac 0x4837f0;
+	static cocos2d::CCTexture2DPixelFormat defaultAlphaPixelFormat() = m1 0x3e9b50, imac 0x4837f0, ios 0x134744;
 	static void setDefaultAlphaPixelFormat(cocos2d::CCTexture2DPixelFormat) = m1 0x3e9b44, imac 0x4837e0, ios 0x134738;
 
 	bool initPremultipliedATextureWithImage(cocos2d::CCImage*, unsigned int, unsigned int) = m1 0x3e8c34, imac 0x4827a0;
