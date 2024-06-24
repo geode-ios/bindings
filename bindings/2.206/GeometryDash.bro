@@ -693,7 +693,7 @@ class ButtonSprite : cocos2d::CCSprite {
   		m_subBGSprite->setColor(color);
   		m_BGSprite->setColor(color);
 	}
-	void setString(char const*) = win 0x3ec60, m1 0x82d08, imac 0x92530;
+	void setString(char const*) = win 0x3ec60, m1 0x82d08, imac 0x92530, ios 0x66050;
 	void updateBGImage(char const*) = win 0x3e6a0, imac 0x92920, ios 0x663f4;
 	void updateSpriteBGSize() = win 0x3e7e0;
 	TodoReturn updateSpriteOffset(cocos2d::CCPoint);
@@ -5013,7 +5013,7 @@ class GameManager : GManager {
 	TodoReturn getFontFile(int) = imac 0x384950;
 	TodoReturn getFontTexture(int);
 	bool getGameVariable(char const*) = win 0x17a0e0, imac 0x378d40, m1 0x304480, ios 0x322f5c;
-	TodoReturn getGTexture(int);
+	TodoReturn getGTexture(int) = ios 0x3298d0;
 	int getIconRequestID() {
 		return m_iconRequestID++;
 	}
@@ -7950,12 +7950,12 @@ class GJGroundLayer : cocos2d::CCLayer {
 
 	static GJGroundLayer* create(int, int) = win 0x26bfe0, ios 0x32198;
 
-	void createLine(int) = win 0x26c890;
+	void createLine(int) = win 0x26c890, ios 0x3267c;
 	TodoReturn deactivateGround();
 	TodoReturn fadeInFinished();
 	TodoReturn getGroundY();
 	TodoReturn hideShadows();
-	bool init(int, int) = win 0x26c060, imac 0x5f4320, m1 0x51c3b4;
+	bool init(int, int) = win 0x26c060, imac 0x5f4320, m1 0x51c3b4, ios 0x3221c;
 	void loadGroundSprites(int, bool) = win 0x26c5d0;
 	void positionGround(float) = ios 0x32fcc;
 	TodoReturn scaleGround(float) = win 0x26ca80;
