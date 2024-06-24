@@ -13460,9 +13460,9 @@ class SetIDPopup : FLAlertLayer, TextInputDelegate {
 	// virtual ~SetIDPopup();
 	// SetIDPopup();
 
-	static SetIDPopup* create(int current, int begin, int end, gd::string title, gd::string button, bool, int, float, bool, bool) = win 0x289030, imac 0x2a6f20, m1 0x24875c;
+	static SetIDPopup* create(int current, int begin, int end, gd::string title, gd::string button, bool, int, float, bool, bool) = win 0x289030, imac 0x2a6f20, m1 0x24875c, ios 0x2ee780;
 
-	bool init(int current, int begin, int end, gd::string title, gd::string button, bool, int, float, bool, bool) = win 0x289160, imac 0x2a7270;
+	bool init(int current, int begin, int end, gd::string title, gd::string button, bool, int, float, bool, bool) = win 0x289160, imac 0x2a7270, ios 0x2ee974;
 	void onCancel(cocos2d::CCObject* sender);
 	void onClose(cocos2d::CCObject* sender);
 	void onItemIDArrow(cocos2d::CCObject* sender);
@@ -13470,7 +13470,7 @@ class SetIDPopup : FLAlertLayer, TextInputDelegate {
 	TodoReturn updateTextInputLabel() = win 0x289c90;
 
 	virtual void keyBackClicked() = win 0x289f10, m1 0x2497c0;
-	virtual void show() = win 0x289d40, m1 0x24973c, imac 0x2a7f40;
+	virtual void show() = win 0x289d40, m1 0x24973c, imac 0x2a7f40, ios 0x2ef444;
 	virtual void textInputClosed(CCTextInputNode*) = m1 0x2495c8;
 	virtual void textChanged(CCTextInputNode*) = win 0x289b90, m1 0x2495e4;
 	virtual void valueChanged() {}
